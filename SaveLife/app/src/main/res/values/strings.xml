@@ -6,4 +6,5 @@
     <string name="title_activity_activate_otp">activateOTP</string>
     <string name="title_activity_acc_report_menu">AccReportMenu</string>
     <string name="title_activity_acc_report">AccReport</string>
+    <string name="title_activity_login">Login</string>
 </resources>
