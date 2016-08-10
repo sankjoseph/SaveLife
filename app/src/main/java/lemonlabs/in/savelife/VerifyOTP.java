@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class VerifyOTP extends AppCompatActivity implements View.OnClickListener, OnPostExecuteListener{
     EditText txtVerifyOTP;
     private String deviceid;
+    IncomingSms smreceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class VerifyOTP extends AppCompatActivity implements View.OnClickListener
         txtVerifyOTP = (EditText) findViewById(R.id.txtVerifyOTP);
         findViewById(R.id.btnVerifyOTP).setOnClickListener(this);
         deviceid = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-        IncomingSms.bindRouter(new SMSRouter() {
+        smreceiver.bindRouter(new SMSRouter() {
             @Override
             public void messageReceived(String messageText) {
                 Log.d("Text", messageText);

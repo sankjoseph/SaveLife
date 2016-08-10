@@ -31,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         startService(new Intent(this, SMSService.class));
 
-        Intent myIntent = new Intent(MainActivity.this, VerifyOTP.class);
-
+         Intent myIntent = new Intent(MainActivity.this, PhotoCapture.class);
         MainActivity.this.startActivity(myIntent);
+
+        /*Intent myIntent = new Intent(MainActivity.this, VerifyOTP.class);
+        MainActivity.this.startActivity(myIntent);*/
 
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
